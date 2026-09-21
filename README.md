@@ -1,37 +1,70 @@
-# Civilization VI Historical Character Portrait Skill
+# Civilization VI Historical Character Prompt Skill
 
-A reusable prompt-generation skill for creating historically grounded, Civilization VI-inspired AAA strategy-game 3D character portraits.
+A strict prompt-generation Skill for creating **stylized Civilization VI-inspired historical leader portraits**.
 
-## What it does
+## Input
 
-Give the skill a historical character name and it automatically builds a production-ready prompt covering:
+Enter a historical character name:
 
-- historical era and civilization
-- representative appearance and age
-- historically appropriate clothing and headwear
-- hairstyle and facial hair
-- weapons, jewelry, and cultural symbols
-- 3D/PBR character rendering
-- consistent pose and composition
-- pure white background for easy cutout
-- reusable negative prompt
+> 岳飞
+
+> 秦始皇
+
+> 宋徽宗
+
+> 拿破仑
+
+The Skill automatically determines the historical context, costume, colors, facial characteristics, and visual identity.
+
+## Output
+
+The Skill returns **only one main image-generation prompt**.
+
+There is intentionally **no negative prompt**. The visual constraints are embedded directly into the main prompt because many image-generation workflows handle positive descriptive prompting more reliably than a separate negative prompt.
+
+## Key visual target
+
+The prompt is designed to produce:
+
+- stylized high-quality 3D rendering
+- grand strategy game leader art
+- Civilization VI-inspired visual language
+- expressive and slightly exaggerated facial proportions
+- polished PBR materials
+- highly detailed historical costume
+- full-body standing character
+- empty hands
+- pure white background
+- soft dramatic studio lighting
+- clear silhouette
+- rich four-color palette
+- painterly 3D game-render finish
+
+## Important difference from a realistic historical portrait
+
+This Skill does not simply describe a historically accurate person and append "3D".
+
+It deliberately reinforces the **designed, stylized, game-character quality** throughout the prompt so the result stays closer to a grand-strategy-game leader illustration rather than a realistic historical portrait.
 
 ## Example
 
 Input:
 
-秦始皇
+> 岳飞
 
-The skill should automatically determine the appropriate Qin-era imperial visual language and return:
+The generated prompt will contain:
 
-1. Character design
-2. Main image-generation prompt
-3. Negative prompt
+- Song-dynasty historical identity
+- military-leader visual characteristics
+- historically appropriate clothing and hair/headwear
+- expressive and stylized facial design
+- detailed fabric and ornament
+- full-body standing pose
+- empty hands
+- pure white background
+- soft dramatic studio lighting
+- a coherent historical color palette
 
-## Series consistency
+## Style reference
 
-The visual framework remains fixed across characters while historical details change. This makes the skill suitable for building a unified set of civilization-game character portraits.
-
-## Note on style reference
-
-The skill uses Civilization VI as a high-level visual reference for 3D strategy-game character presentation. It should not reproduce proprietary character models or assets.
+Civilization VI is used as a high-level visual reference for strategy-game leader presentation. This Skill does not reproduce proprietary character models or assets.
