@@ -1,37 +1,34 @@
-# Civilization VI Historical Character Portrait Skill
+# Civilization VI Character Prompt Skills
 
-A reusable prompt-generation skill for creating historically grounded, Civilization VI-inspired AAA strategy-game 3D character portraits.
+A collection of reusable prompt-generation skills for creating Civilization VI-inspired strategy-game character art.
 
-## What it does
+## Skills
 
-Give the skill a historical character name and it automatically builds a production-ready prompt covering:
+### Historical Character / Leader Portrait
 
-- historical era and civilization
-- representative appearance and age
-- historically appropriate clothing and headwear
-- hairstyle and facial hair
-- weapons, jewelry, and cultural symbols
-- 3D/PBR character rendering
-- consistent pose and composition
-- pure white background for easy cutout
-- reusable negative prompt
+The root `SKILL.md` generates historically grounded full-body or large-format character prompts from a historical character name.
+
+### Governor Portrait
+
+[`governor/SKILL.md`](governor/SKILL.md) generates compact, expressive Governor-style portrait prompts from either:
+
+- a historical character name, e.g. `岳飞`
+- a free-form description, e.g. `一个中国男性，魁梧、武将、正义`
+
+Governor portraits emphasize facial identity, expressive stylization, chest/waist-up framing, polished 3D rendering, and a soft fade into a pure white background.
 
 ## Example
 
 Input:
 
-秦始皇
+岳飞
 
-The skill should automatically determine the appropriate Qin-era imperial visual language and return:
+Output:
 
-1. Character design
-2. Main image-generation prompt
+1. Character interpretation
+2. Production-ready main prompt
 3. Negative prompt
 
-## Series consistency
+## Style reference
 
-The visual framework remains fixed across characters while historical details change. This makes the skill suitable for building a unified set of civilization-game character portraits.
-
-## Note on style reference
-
-The skill uses Civilization VI as a high-level visual reference for 3D strategy-game character presentation. It should not reproduce proprietary character models or assets.
+These skills use Civilization VI as a high-level visual reference for strategy-game character presentation. They should not reproduce proprietary character models or assets.
