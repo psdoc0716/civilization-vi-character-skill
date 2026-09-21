@@ -1,6 +1,44 @@
 # Civilization VI Historical Character Prompt Skill
 
-A strict prompt-generation Skill for creating **stylized Civilization VI-inspired historical leader portraits**.
+A strict prompt-generation Skill for creating **medium-realism, stylized Civilization VI-inspired historical leader portraits**.
+
+## The key visual target
+
+The intended look is:
+
+**中等写实 + 风格化 + 明显 3D 建模感 + 策略游戏角色质感**
+
+It should look like a professionally modeled and rendered game character, not like a photograph of a real person.
+
+### What to emphasize
+
+- stylized 3D game character
+- medium realism
+- visible 3D modeling
+- slightly exaggerated but natural proportions
+- simplified facial planes
+- expressive character design
+- painterly game-rendered surfaces
+- controlled game lighting
+- clear 3D shadow structure
+- historically accurate costume design
+- full-body standing character
+- pure white background
+
+### What to avoid
+
+The Skill deliberately avoids pushing the image model toward:
+
+- photorealistic portraits
+- hyperrealistic skin
+- documentary photography
+- live-action movie stills
+- photographic lighting
+- microscopic skin pores
+- excessive realistic wrinkles
+- generic realistic historical portraits
+
+It also avoids relying on a negative prompt. The visual target is established directly inside the main prompt.
 
 ## Input
 
@@ -20,51 +58,34 @@ The Skill automatically determines the historical context, costume, colors, faci
 
 The Skill returns **only one main image-generation prompt**.
 
-There is intentionally **no negative prompt**. The visual constraints are embedded directly into the main prompt because many image-generation workflows handle positive descriptive prompting more reliably than a separate negative prompt.
+There is intentionally **no negative prompt**.
 
-## Key visual target
+## Example visual logic
 
-The prompt is designed to produce:
+For a historical character, the Skill separates two layers:
 
-- stylized high-quality 3D rendering
-- grand strategy game leader art
-- Civilization VI-inspired visual language
-- expressive and slightly exaggerated facial proportions
-- polished PBR materials
-- highly detailed historical costume
-- full-body standing character
-- empty hands
-- pure white background
-- soft dramatic studio lighting
-- clear silhouette
-- rich four-color palette
-- painterly 3D game-render finish
+**Historical layer**
 
-## Important difference from a realistic historical portrait
+- era
+- clothing
+- headwear
+- hairstyle
+- accessories
+- colors
+- symbols
 
-This Skill does not simply describe a historically accurate person and append "3D".
+**Game-art layer**
 
-It deliberately reinforces the **designed, stylized, game-character quality** throughout the prompt so the result stays closer to a grand-strategy-game leader illustration rather than a realistic historical portrait.
+- stylized 3D modeling
+- moderate realism
+- slightly exaggerated facial proportions
+- simplified facial planes
+- designed character silhouette
+- game-rendered materials
+- controlled 3D lighting
 
-## Example
-
-Input:
-
-> 岳飞
-
-The generated prompt will contain:
-
-- Song-dynasty historical identity
-- military-leader visual characteristics
-- historically appropriate clothing and hair/headwear
-- expressive and stylized facial design
-- detailed fabric and ornament
-- full-body standing pose
-- empty hands
-- pure white background
-- soft dramatic studio lighting
-- a coherent historical color palette
+This separation is important: historical details provide authenticity, while the game-art layer prevents the result from becoming a realistic historical photograph.
 
 ## Style reference
 
-Civilization VI is used as a high-level visual reference for strategy-game leader presentation. This Skill does not reproduce proprietary character models or assets.
+Civilization VI is used as a high-level visual reference for strategy-game character presentation. The target is medium-realism, stylized 3D game art rather than photorealistic photography or cartoon illustration. This Skill does not reproduce proprietary character models or assets.
